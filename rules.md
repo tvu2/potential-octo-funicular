@@ -23,7 +23,7 @@ and missed deadlines.
 
 
 ## How we will back up each other to ensure that deadlines are not missed
-
+* The person who finished his or her part will help others who don't finished before the deadline.
 
 
 ## Add any other rules that your team establishes to help each other work effectively together
