@@ -30,10 +30,10 @@ and missed deadlines.
 * The general rule is to always help each other out whenever we can so that we can succeed together.
 * Be responsive to team's email, Slack messages. 
 * Attend team meetings unless discussed with team.  
-* Write code with conventions which can be adopted from CS400 assignment and/or decided by team: 
-    Professional looking and readble codes  
-    Use headers, comments generously and effectively
-    Method names, variable names should be as descriptive as possible    
+* Write code with conventions which can be adopted from CS400 assignment and/or decided by team:   
+    + Professional looking and readable codes  
+    + Use headers, comments generously and effectively  
+    + Method names, variable names should be as descriptive as possible    
 * Try and write pseudo codes with group before coding individual parts. 
 * Be respectful and honest with each other even when there are conflicts or disagreements. 
 * Each team member is deserved the benefit of the doubt so if he/she breaks the rules a couple of times, we should try to understand his/her reasons and help him/her avoid repeating the mistakes in the future even if we need to do more to make up for the work that he/she misses. 
