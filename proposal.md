@@ -54,11 +54,12 @@ Depending on the input data, the output can be different. Below is some examples
 
 3. Input: Describe the data that is needed to solve your problem. Include an example format of the input data.
 
-Our program requires multiple data type, described in table below. 
-|Input format|Input description|Examples|
-|---|---|---|
-|String/text|Users' actions/requests|view inventory, update inventory, view recipe|
-|String/text|Description of a recipe|See reciple.txt|
+Our program requires multiple data type, described in table below.
+
+|Input format|Input description|Examples|  
+|---|---|---|  
+|String/text|Users' actions/requests|view inventory, update inventory, view recipe|  
+|String/text|Description of a recipe|See reciple.txt|  
 |String/text| Name, description of ingredients, units|Eggs, Pasta, Cheese, lbs, oz|
 |Numbers|Inputs for ingredients' quantity, shelf life(by days)| 12, 3.5|
 |Date|Inputs for expiration date, purchse date||Dec 13 2018|
