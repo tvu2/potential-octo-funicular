@@ -62,7 +62,7 @@ Our program requires multiple data type, described in table below.
 |String/text|Description of a recipe|See reciple.txt|  
 |String/text| Name, description of ingredients, units|Eggs, Pasta, Cheese, lbs, oz|
 |Numbers|Inputs for ingredients' quantity, shelf life(by days)| 12, 3.5|
-|Date|Inputs for expiration date, purchse date||Dec 13 2018|
+|Date|Inputs for expiration date, purchase date||10/13/2018|
 
 4. User Interface: Describe a user interface for your program.  Use text menus or a simple graphic user interface.
 
