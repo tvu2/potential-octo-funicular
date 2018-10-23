@@ -45,17 +45,23 @@ Developing a Kitchen Manager Application
 
 Depending on the input data, the output can be different. Below is some examples of outputs produced by our Kitchen Manager Application
 
-|Output format|Output Description|
-|---|---|
-|Table/spreadsheet/csv file|List of all ingredients available in the inventory sorted by expiration date. Each ingredient comes with the following properties: name, description, category (eg. Meat, Vegetable, Dry,etc.), expiration date, purchased date, amount.|
-|Table/spreadsheet/csv file| List of ingredients needed for a particular recipe.|
-|Text document/txt file| A recipe with required ingredients and instructions of how to execute it.|
-|Text document/txt file| A list of suggested recipes|
+|Output format|Output description|Notes|
+|---|---|---|
+|Table/spreadsheet/csv file|List of all ingredients available in the inventory sorted by expiration date. Each ingredient comes with the following properties: name, description, category (eg. Meat, Vegetable, Dry,etc.), expiration date, purchased date, amount.|See file inventory.csv|
+|Table/spreadsheet/csv file| List of ingredients needed for a particular recipe.|See recipe_list.csv|
+|Text document/txt file| A recipe with required ingredients and instructions of how to execute it.|See recipe.txt|
 
 
 3. Input: Describe the data that is needed to solve your problem. Include an example format of the input data.
 
-
+Our program requires multiple data type, described in table below. 
+|Input format|Input description|Examples|
+|---|---|---|
+|String/text|Users' actions/requests|view inventory, update inventory, view recipe|
+|String/text|Description of a recipe|See reciple.txt|
+|String/text| Name, description of ingredients, units|Eggs, Pasta, Cheese, lbs, oz|
+|Numbers|Inputs for ingredients' quantity, shelf life(by days)| 12, 3.5|
+|Date|Inputs for expiration date, purchse date||Dec 13 2018|
 
 4. User Interface: Describe a user interface for your program.  Use text menus or a simple graphic user interface.
 
