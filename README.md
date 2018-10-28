@@ -11,8 +11,8 @@
        * GitHub username 2: lewisgross1296     name 2: Lewis Gross
        * GitHub username 3: meowkovich         name 3: Christopher Matson
        * GitHub username 4: ZhengwangMa        name 4: Zhengwang Ma
-   * When did you complete this exercise? 10/16/2018
-   * How long did it take your team to complete this exercise? 2 hrs
+   * When did you complete this exercise? 10/29/2018
+   * How long did it take your team to complete this exercise? 2 days
 
 ## Table of Contents
 
