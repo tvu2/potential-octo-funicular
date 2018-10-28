@@ -147,7 +147,9 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 	public class KitchenManager(){
 		// Constructor to create a KitchenManager object
 		KitchenManager() {};
-		// In addition to the public methods described in the KitchenManagerADT.java, it may have additional private helper methods such as methods to load inventory from file on disk or database, save inventory to file after update, etc. 
+		// Implementation Public methods listed in KitchenManagerADT.java
+		// Additional private helper methods such as: 
+		// load/read inventory from file on disk, save inventory to file after update, etc. 
 	}
 	```
 	**c. Ingredient.java** 
@@ -159,7 +161,8 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		Ingredient(String name, String description, String category, String unit, String location) {}
 		// Accessor methods
 		// Mutator methods
-		// Overide equals() method to compare two ingredients object. If they have the same name, and description, they are the same object
+		// Overide equals() method to compare two ingredients object using the following rule: 
+		// If they have the same name, and description, they are the same ingredients
 		@overide
 		public int equals(Ingredient ingredient){}
 		// Overide hashCode method
@@ -179,7 +182,8 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		Recipe(List<Ingredient> ingredients, List<Object> quantities, String instruction)
 		// Accessor methods
 		// Mutator methods
-		// Overide equals() method to compare two recipes. If they have the same name, same List of ingredients, they are the same.
+		// Overide equals() method to compare two recipes. 
+		// If they have the same name, same List of ingredients, they are the same recipes.
 		@overide
 		public boolean equals(Recipe recipe) {}
 	}
@@ -190,8 +194,11 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
    	public main() {
    	// Create a KitchenManager object
    	KitchenManger KM = new KitchenManager();
-   	// Display options for users to select: view inventory/cookbook, view ingredient/recipe, edit ingredient/recipe, delete ingredient/recipe, add ingredient/recipe, make recipe.
-   	// Depending on the selected action, the users may need to provide more information (recipe or ingredient) and the KitchenManager will calls appropriate method to execute the action
+   	// Display options for users to select: 
+	// view inventory/cookbook, view ingredient/recipe, 
+	// edit ingredient/recipe, delete ingredient/recipe, add ingredient/recipe, make recipe.
+   	// Depending on the selected action, the users may need to provide more information (recipe or ingredient) 
+	// and the KitchenManager will calls appropriate method to execute the action
    	// Some user interface methods to display data for user or get inputs from users
    }
    ```
