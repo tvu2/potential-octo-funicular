@@ -66,9 +66,9 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 
 ![Cookbook Screen](https://github.com/tvu2/potential-octo-funicular/blob/TV_branch/cookbook.jpg)
 
-5. Types List: Break your solution idea down into units that you think can be implemented with a single class.
+5. Types List: Break your solution idea down into units that you think can be implemented with a single class.  
 	**a. KitchenManagerADT.java**
-	This is the interface for the Kitchen Manager application. It has the following methods
+	This is the interface for the Kitchen Manager application.
 	```
 	public interface KitchenManagerADT {
 		// This method returns the inventory as a hash table of ingredient objects. 
@@ -132,9 +132,14 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		// It throws similar exceptions to updateRecipe method. 
 
 		public Recipe viewRecipe(Recipe recipe) throws IllegalArgumentException, NoSuchElementException;
+
+		// This method makes the recipe.
+		// It reduces the ingredients in the inventory by the quantites used in the recipe
+		// It throws similar exceptions to the updateRecipe method
+
+		public void makeRecipe(Recipe recipe) throws IllegalArgumentException, NoSuchElementException;
 	} 
 	```
-	
 	**b. KitchenManager.java**
 	This class implements the methods described in the KitchenManagerADT.java
 	```
@@ -178,16 +183,14 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		public boolean equals(Recipe recipe) {}
 	}
 	```
-
 	**e. Main.java**
    	This class takes in users' inputs and processes them by calling appropriate KitchenManager methods.  
    	```
    	public main() {
    	// Create a KitchenManager object
    	KitchenManger KM = new KitchenManager();
-   	// Display options for users to select: 
-   	// Ask users to select one of the 10 actions: view inventory, view ingredient, add ingredient, update ingredient, remove ingredient, view cookbook, view recipe, add recipe, update recipe, remove recipe
-   	// Depending on the action, the users may need to provide more information (recipe or ingredient) and the KitchenManager will calls appropriate method to execute the action
+   	// Display options for users to select: view inventory/cookbook, view ingredient/recipe, edit ingredient/recipe, delete ingredient/recipe, add ingredient/recipe, make recipe.
+   	// Depending on the selected action, the users may need to provide more information (recipe or ingredient) and the KitchenManager will calls appropriate method to execute the action
    	// Some user interface methods to display data for user or get inputs from users
    }
    ```
