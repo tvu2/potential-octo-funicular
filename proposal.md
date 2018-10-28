@@ -18,7 +18,7 @@ Be sure to submit corresponding image files, i.e. figure1.png (or figure1.jpg) f
   
   ** a custom data structure designed and built by your team
   
-  ** comprehensive testing of individual units
+  ** comprehensive testing of individual units **@lewisgross1296: can you work on this part?)**
   
  Caution: You are not being asked to implement this program, at least not yet. 
  We just want your group to make a proposal or pitch for your program.
@@ -31,7 +31,7 @@ The problem our team wants to solve is how to efficiently manage our kitchen sup
 
 2. Describe at a high level a program that could solve that problem.  
 We propose to develop a kitchen manager application that allows users to edit(add, remove, update)/view the inventory (list of ingredients), edit/view the cookbook (list of recipes). The users can also select one or more recipes from the cookbook and the application would tell the users whether they have enough ingredients to execute the recipes. Furthermore, the application can suggest recipes for users based on available ingredients if the selected recipes can not be executed. These capabilities help sove the problem stated above in the following ways: 
-* Users can view what ingredients they have and the expiration dates so when they do grocery shopping, they would not buy items that are still good and available at home. In other words, they can decide which ingredients should be used before they go bad. 
+* Users can view what ingredients they have so when they do grocery shopping, they can decide how many/much they need to buy. 
 * Users can select from the suggested recipes to cook meals with available ingredients so these ingredients will be used up and not go to waste.
 
 
@@ -47,10 +47,8 @@ Depending on the input data, the output can be different. Below is some examples
 
 |Output format|Output description|Notes|
 |---|---|---|
-|Table/spreadsheet/csv file|List of all ingredients available in the inventory sorted by expiration date. Each ingredient comes with the following properties: name, description, category (eg. Meat, Vegetable, Dry,etc.), expiration date, purchased date, amount.|See file inventory.csv|
-|Table/spreadsheet/csv file| List of ingredients needed for a particular recipe.|See recipe_list.csv|
-|Text document/txt file| A recipe with required ingredients and instructions of how to execute it.|See recipe.txt|
-
+|Table/spreadsheet|List of all ingredients available in the inventory. Each ingredient comes with the following properties: ID, name, description, category (eg. Meat, Vegetable, Dry,etc.), quantity, units, location.|See file inventory.csv|
+|Text document| A recipe with required ingredients and instructions of how to execute it.|See recipe.txt|
 
 3. Input: Describe the data that is needed to solve your problem. Include an example format of the input data.
 
@@ -58,22 +56,97 @@ Our program requires multiple data type, described in table below.
 
 |Input format|Input description|Examples|  
 |---|---|---|  
-|String/text|Users' actions/requests|view inventory, update inventory, view recipe|  
-|String/text|Description of a recipe|See reciple.txt|  
-|String/text| Name, description of ingredients, units|Eggs, Pasta, Cheese, lbs, oz|
-|Numbers|Inputs for ingredients' quantity, shelf life(by days)| 12, 3.5|
-|Date|Inputs for expiration date, purchase date|10/13/2018|
+|String/text|Users' actions/requests|view inventory, view ingredient, edit(add, remove, update) ingredient, view cookbook, view recipe, edit(add, remove, update) recipe|  
+|String/text|Recipe's instruction|See recipe.txt|  
+|String/text|Name, description, category, units, location of ingredients|Apples, Fuji, Fruits, counts, Fridge|
+|Number|Inputs for ingredients' quantity|5|
 
 4. User Interface: Describe a user interface for your program.  Use text menus or a simple graphic user interface.
 
 
 
 5. Types List: Break your solution idea down into units that you think can be implemented with a single class.
+	**a. KitchenManagerADT.java**
+	This is the interface for the Kitchen Manager application. It has the following methods
+	```
+	public interface KitchenManagerADT {
+		// This method returns the inventory as a hash table of ingredient objects. The ingredient object is comparable and used as a key. The Object represents the quantity of the Ingredient object in the inventory. It could be Integer or Double.
+		public HashTable<Ingredient, Object> viewInventory();
+		// This method adds a new ingredient to the inventory. It first checks if the ingredient exists in the inventory. If it exists in the inventory, it will update the inventory with new inputs. If it does not exists in the inventory, it will add the ingredient to the inventory. If the ingredient is null, it will throw an IllegalArgumentException.  
+		public void addIngredient(Ingredient ingredient) throws IllegalArgumentException;
+		// This method updates an existing ingredient in the inventory. It first checks if the ingredient exists in the inventory. If it does not exists, throws a NoSuchElementException. If the ingredient is null, it throws an IllegalArgumentException. If the ingredient exists, it update the ingredient with new properties.  
+		public void updateIngredient(Ingredient ingredient) throws IllegalArgumentException, NoSuchElementException;
+		// This method removes an existing ingredient in the inventory. It checks if the ingredient exists. It throws exceptions similar to updateIngredient method. If the ingredient exists, it remove the ingredient from the inventory. 
+		public void removeIngredient(Ingredient ingredient);
+		// This method return an ingredient object. If the ingredient doesn't exist in the inventory or is null, it throws NoSuchElementException or IllegalArgumentException respectively. 
+		public Ingredient viewIngredient(Ingredient ingredient) throws IllegalArgumentException, NoSuchElementException;
+		// This method returns the cookbook as a list of recipe objects.
+		public List<Recipe> viewCookBook();
+		// This method adds a new recipe to the cookbook. If the recipe exists in the cookbook, it will update the recipe. Otherwise it will add the recipe. It throws an IllegalArgumentException if the recipe is null. 
+		public void addRecipe(Recipe recipe) throws IllegalArgumentException;
+		// This method updates an existing recipe in the cookbook. If the recipe exists, it will update the recipe with new properties. Otherwise, it will throw a NoSuchElementException. If the recipe is null, it throws IllegalArgumentException. 
+		public void updateRecipe(Recipe recipe) throws IllegalArgumentException, NoSuchElementException;
+		// This method removes an existing recipe in the cookbook. If the recipe exists, it will remove the recipe from the cookbook. Otherwise, it will throw a NoSuchElementException. If the recipe is null, it throws an IllegalArgumentException
+		public void removeRecipe(Recipe recipe) throws IllegalArgumentException, NoSuchElementException;
+		// This method returns a recipe object. If the recipe does not exist or is null, it will throw NoSuchElementException or IllegalArgumentException respectively. 
+		public Recipe viewRecipe(Recipe recipe) throws IllegalArgumentException, NoSuchElementException;
+	} 
+	```
+	**b. KitchenManager.java**
+	This class implements the methods described in the KitchenManagerADT.java
+	```
+	public class KitchenManager(){
+		// Constructor to create a KitchenManager object
+		KitchenManager() {};
+		// In addition to the public methods described in the KitchenManagerADT.java, it may have additional private helper methods such as methods to load inventory from file on disk or database, save inventory to file after update, etc. 
+	}
+	```
+	**c. Ingredient.java** 
+	This class represents ingredient. 
+	```
+	public class Ingredient() {
+		private String name, description, category, location, unit;
+		// Constructor to create an Ingredient object
+		Ingredient(String name, String description, String category, String unit, String location) {}
+		// Accessor methods
+		// Mutator methods
+		// Overide equals() method to compare two ingredients object. If they have the same name, and description, they are the same object
+		@overide
+		public int equals(Ingredient ingredient){}
+		// Overide hashCode method
+		@overide
+		public int hashCode(Ingredient ingredient){}
+	}
+	```
+	**d. Recipe.java**
+	This class represents recipe
+	```
+	public class Recipe() {
+		private String name; // name of the recipe
+		private List<Ingredient>; // list of ingredients
+		private List<Object>; // list of quantities (numbers can be integer or double)
+		private String instruction; // instruction how to execute the recipe
+		// Constructor
+		Recipe(List<Ingredient> ingredients, List<Object> quantities, String instruction)
+		// Accessor methods
+		// Mutator methods
+		// Overide equals() method to compare two recipes. If they have the same name, same List of ingredients, they are the same.
+		@overide
+		public boolean equals(Recipe recipe) {}
+	}
+	```
 
-
-
-Name each interface or class and briefly describe its function or purpose.
-
+	**e. Main.java**
+   	This class takes in users' inputs and processes them by calling appropriate KitchenManager methods.  
+   	```
+   	public main() {
+   	// Create a KitchenManager object
+   	KitchenManger KM = new KitchenManager();
+   	// Ask users to select one of the 10 actions: view inventory, view ingredient, add ingredient, update ingredient, remove ingredient, view cookbook, view recipe, add recipe, update recipe, remove recipe
+   	// Depending on the action, the users may need to provide more information (recipe or ingredient) and the KitchenManager will calls appropriate method to execute the action
+   	// Some user interface methods to display data for user or get inputs from users
+   }
+   ```
 
 ## Edit and Submit this file and any figures referenced by this document.
 
