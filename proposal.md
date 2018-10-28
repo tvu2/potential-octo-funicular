@@ -66,7 +66,13 @@ Our program requires multiple data type, described in table below.
 
 4. User Interface: Describe a user interface for your program.  Use text menus or a simple graphic user interface.
 
+The program will contain two main screens that the user can select from. The first screen will be the Inventory screen. From here the user can create, delete, edit, and view individual ingredients. To change the quantity of an item the user will click the Edit button. From there a new window will pop up with additional details such as a description of the ingredient and the quantity (which can be changed as needed). The View button will take the user to a similar window as the Edit button, except all fields will be uneditable. To create a brand new ingredient the user will click the Add New Ingredient button.
 
+![Inventory Screen](https://github.com/tvu2/potential-octo-funicular/blob/TV_branch/inventory.jpg)
+
+The second screen in the program will be the Cookbook screen. In the Cookbook screen the user can manage recipes made up of one or more ingredients. The Cookbook screen will have similar functions as the Inventory screen. The Make button will take the user to another screen where the recipe ingredients will be listed (ingredients that are missing will be listed in red). If all ingredients are available, the user can confirm they want to make the recipe, which will automatically subtract all ingredients used in the Inventory menu. The Create New Recipe button will be similar to the Ingredient screen's Add New Ingredient button. The button will take the user to a new screen where the needed ingredients (and the quantity needed for each ingredient) for the recipe can be added. The user can also click the Edit button to edit the needed ingredients for any given recipe.
+
+![Cookbook Screen](https://github.com/tvu2/potential-octo-funicular/blob/TV_branch/cookbook.jpg)
 
 5. Types List: Break your solution idea down into units that you think can be implemented with a single class.
 
