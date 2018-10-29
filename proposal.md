@@ -72,7 +72,6 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		// This method returns the inventory as a hash table of ingredient objects. 
 		// The Ingredient object is comparable and used as a key. 
 		// The Object represents the quantity of the Ingredient object. It could be Integer or Double.
-		
 		public HashTable<Ingredient, Object> viewInventory();
 		
 		// This method adds a new ingredient to the inventory. 
@@ -80,7 +79,6 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		// If it exists in the inventory, it will update the inventory with new inputs. 
 		// If it does not exists in the inventory, it will add the ingredient to the inventory. 
 		// If the ingredient is null, it will throw an IllegalArgumentException.  
-		
 		public void addIngredient(Ingredient ingredient) throws IllegalArgumentException;
 		
 		// This method updates an existing ingredient in the inventory. 
@@ -88,53 +86,44 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		// If it does not exists, throws a NoSuchElementException. 
 		// If the ingredient is null, it throws an IllegalArgumentException. 
 		// If the ingredient exists, it update the ingredient with new properties.  
-		
 		public void updateIngredient(Ingredient ingredient) throws IllegalArgumentException, NoSuchElementException;
 		
 		// This method removes an existing ingredient in the inventory. 
 		// It checks if the ingredient exists. 
 		// It throws exceptions similar to updateIngredient method. 
 		// If the ingredient exists, it remove the ingredient from the inventory. 
-		
 		public void removeIngredient(Ingredient ingredient) throws IllegalArgumentException, NoSuchElementException;
 		
 		// This method returns an ingredient object. 
 		// It throws exceptions similar to updateIngredient method
-
 		public Ingredient viewIngredient(Ingredient ingredient) throws IllegalArgumentException, NoSuchElementException;
 
 		// This method returns the cookbook as a list of recipe objects.
-		
 		public List<Recipe> viewCookBook();
 
 		// This method adds a new recipe to the cookbook. 
 		// If the recipe exists in the cookbook, it will update the recipe. 
 		// Otherwise it will add the recipe. 
 		// It throws an IllegalArgumentException if the recipe is null. 
-		
 		public void addRecipe(Recipe recipe) throws IllegalArgumentException;
 		
 		// This method updates an existing recipe in the cookbook. 
 		// If the recipe exists, it will update the recipe with new properties. 
 		// Otherwise, it will throw a NoSuchElementException. 
 		// If the recipe is null, it throws IllegalArgumentException. 
-		
 		public void updateRecipe(Recipe recipe) throws IllegalArgumentException, NoSuchElementException;
 		
 		// This method removes an existing recipe in the cookbook. 
 		// It throws similar exceptions to updateRecipe method. 
-
 		public void removeRecipe(Recipe recipe) throws IllegalArgumentException, NoSuchElementException;
 		
 		// This method returns a recipe object. 
 		// It throws similar exceptions to updateRecipe method. 
-
 		public Recipe viewRecipe(Recipe recipe) throws IllegalArgumentException, NoSuchElementException;
 
 		// This method makes the recipe.
 		// It reduces the ingredients in the inventory by the quantites used in the recipe
 		// It throws similar exceptions to the updateRecipe method
-
 		public void makeRecipe(Recipe recipe) throws IllegalArgumentException, NoSuchElementException;
 	} 
 	```
@@ -154,6 +143,7 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 	```
 	public class Ingredient() {
 		private String name, description, category, location, unit;
+
 		// Constructor to create an Ingredient object
 		Ingredient(String name, String description, String category, String unit, String location) {}
 		// Accessor methods
