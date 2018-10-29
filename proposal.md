@@ -10,15 +10,14 @@ Be sure to submit corresponding image files, i.e. figure1.png (or figure1.jpg) f
 
 ## Grading: To earn full credit, your team's proposal must include:
 
-* (md) documentation: [this file] describing purpose and use of your program
+** (md) documentation: [this file] describing purpose and use of your program
 
-* Description of a program that has:
-
-  ** a main Java program class in a file named Main.java
-  
-  ** a custom data structure designed and built by your team
-  
-  ** comprehensive testing of individual units 
+** Description of a program that has:
+  ** Our program will consist of the following classes and interface (See Answers to Question 5 in the section below for description of each class and interface)
+  	* Classes: Main, KitchenManager, Ingredient, Recipe
+	* Interface: KitchenManagerADT
+  ** Our custom objects are Ingredient, and Recipe. We use a hash table (similar to P3) to store the inventory with Ingredient being the key and quantity being the value. Since Ingredient is a custom object, we need to overide the equals and hashCode methods to support hash table operations. For a cookbook which is a collection of recipes, we used List to store the recipes. Since Recipe is also a custom object, we also need to overide the equals method to support List operations. 
+** comprehensive testing of individual units 
   
  Caution: You are not being asked to implement this program, at least not yet. 
  We just want your group to make a proposal or pitch for your program.
