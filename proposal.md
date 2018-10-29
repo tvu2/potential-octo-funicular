@@ -227,34 +227,30 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		}
 		
 		@Test
-		public void test05() {
-		//
+		public void test05ingreedientUpdates() {
+		// Create an ingreedient
+		// Call the updateIngreedient method
+		// compare the ingredient found in the hash table with the updated data
+		// to make sure they are the same
 		}
 		
 		@Test
-		public void test06() {
-		//
+		public void test06recipeUpdates() {
+		// Create an recipe
+		// Call the updateRecipe method
+		// compare the recipe found in the hash table with the updated data
+		// to make sure they are the same		}
+		
+		@Test
+		public void test07removeIngredient() {
+		// Add an Ingredient, remove it from the hashTable and call isEmpty
 		}
 		
 		@Test
-		public void test07() {
-		//
+		public void test08removeRecipe() {
+		// Add a recipe, remove it from the hashTable and call isEmpty
 		}
-		
-		@Test
-		public void test08() {
-		//
-		}
-		
-		@Test
-		public void test09() {
-		//
-		}
-		
-		@Test
-		public void test10() {
-		//
-		}
+
 	}
 	```
 
