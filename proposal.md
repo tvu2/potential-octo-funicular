@@ -18,19 +18,19 @@ Be sure to submit corresponding image files, i.e. figure1.png (or figure1.jpg) f
   
   ** a custom data structure designed and built by your team
   
-  ** comprehensive testing of individual units **@lewisgross1296: can you work on this part?**
+  ** comprehensive testing of individual units 
   
  Caution: You are not being asked to implement this program, at least not yet. 
  We just want your group to make a proposal or pitch for your program.
  
- Tip: Your custom data structure can be composed of or extensions of data structures that you have learned and used in previous programming assignments.  We're looking for decisions about how to build a high-level data structure that will likely have lower-level components.
+Tip: Your custom data structure can be composed of or extensions of data structures that you have learned and used in previous programming assignments.  We're looking for decisions about how to build a high-level data structure that will likely have lower-level components.
 
 ## Problem Description
 1. Briefly describe a problem that your team would like to solve.  
-The problem our team wants to solve is how to efficiently manage our kitchen supply such as dry ingredients, fresh/perishable ingredients so that we can avoid wasting them. 
+	The problem our team wants to solve is how to efficiently manage our kitchen supply such as dry ingredients, fresh/perishable ingredients so that we can avoid wasting them. 
 
 2. Describe at a high level a program that could solve that problem.  
-We propose to develop a kitchen manager application that allows users to edit(add, remove, update)/view the inventory (list of ingredients), edit/view the cookbook (list of recipes). The users can also select one or more recipes from the cookbook and the application would tell the users whether they have enough ingredients to execute the recipes. Furthermore, the application can suggest recipes for users based on available ingredients if the selected recipes can not be executed. These capabilities help sove the problem stated above in the following ways: 
+	We propose to develop a kitchen manager application that allows users to edit(add, remove, update)/view the inventory (list of ingredients), edit/view the cookbook (list of recipes). The users can also select one or more recipes from the cookbook and the application would tell the users whether they have enough ingredients to execute the recipes. Furthermore, the application can suggest recipes for users based on available ingredients if the selected recipes can not be executed. These capabilities help sove the problem stated above in the following ways: 
 * Users can view what ingredients they have so when they do grocery shopping, they can decide how many/much they need to buy. 
 * Users can select from the suggested recipes to cook meals with available ingredients so these ingredients will be used up and not go to waste.
 
