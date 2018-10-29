@@ -227,7 +227,7 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		}
 		
 		@Test
-		public void test05ingreedientUpdates() {
+		public void test05ingredientUpdates() {
 		// Create an ingreedient
 		// Call the updateIngreedient method
 		// compare the ingredient found in the hash table with the updated data
@@ -250,6 +250,102 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		public void test08removeRecipe() {
 		// Add a recipe, remove it from the hashTable and call isEmpty
 		}
+		
+		@Test
+		public void test09AddManyIngredients() {
+		// Initialize/add many ingredients to the cookbook
+		// Run through all ingredients to make sure they are all there
+		}
+		
+		@Test
+		public void test10AddManyRecipes() {
+		// Initialize/add many recipes to the cookbook
+		// Run through all recipes to make sure they are there
+		}
+		
+		@Test
+		public void test11AddIngredientsSubtractQuantity() {
+		// Initialize and add many ingredients to the cookbook
+		// with a certain quantity.
+		// Initialize and add a custom recipe.
+		// Use recipe to subtract the correct quantity from
+		// each ingredient.
+		// Tests if quanities are subtracted correctly.
+		}
+		
+		@Test
+		public void test12IngredientQuantityUnderZero() {
+		// Test the special/error case where an ingredient's quantity may
+		// drop below zero.
+		}
+		
+		@Test 
+		public void test13ViewNullRecipe() {
+		// Test to see if viewRecipe() throws an exception when
+		// attempting to view a null recipe argument.
+		}
+		
+		@Test 
+		public void test14RemoveNullRecipe() {
+		// Test to see if removeRecipe() throws an exception when
+		// attempting to remove a null recipe argument.
+		}
+		
+		@Test 
+		public void test15RemoveRecipeFromEmptyBook() {
+		// Test to see if removeRecipe() throws an exception when
+		// attempting to remove a recipe in an empty cookbook.
+		}
+		
+		@Test 
+		public void test16RemoveRecipeNotInBook() {
+		// Initialize some recipes into cookbook.
+		// Test to see if removeRecipe() throws an exception when
+		// attempting to remove a recipe that is not in the cookbook.
+		}
+		
+		@Test 
+		public void test17UpdateNullRecipe() {
+		// Test to see if updateRecipe() throws an exception when
+		// attempting to update a null recipe argument.
+		}
+		
+		@Test 
+		public void test18UpdateRecipeNotInBook() {
+		// Initialize some recipes into cookbook.
+		// Test to see if updateRecipe() throws an exception when
+		// attempting to update a recipe not in the cookbook.
+		}
+		
+		@Test 
+		public void test19UpdateRecipeEmptyBook() {
+		// Test to see if removeRecipe() throws an exception when
+		// attempting to update a recipe in an empty cookbook.
+		}
+		
+		@Test 
+		public void test20MakeNullRecipe() {
+		// Test to see if makeRecipe() throws an exception when
+		// attempting to make a null recipe argument.
+		}
+		
+		@Test 
+		public void test21MakeRecipeNotInBook() {
+		// Initialize some recipes into cookbook.
+		// Test to see if makeRecipe() throws an exception when
+		// attempting to make a recipe not in the cookbook.
+		}
+		
+		@Test 
+		public void test19MakeRecipeEmptyBook() {
+		// Test to see if makeRecipe() throws an exception when
+		// attempting to make a recipe from an empty cookbook.
+		}
+		
+		// removeIngredient(), updateIngredient(), and viewIngredient()
+		// should be tested in the same exact format as makeRecipe(),
+		// removeRecipe(), and updateRecipe() were in the above example
+		// tests.
 
 	}
 	```
