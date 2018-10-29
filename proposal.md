@@ -26,12 +26,10 @@ Tip: Your custom data structure can be composed of or extensions of data structu
 
 ## Problem Description
 1. Briefly describe a problem that your team would like to solve.  
-	The problem our team wants to solve is how to efficiently manage our kitchen supply such as dry ingredients, fresh/perishable ingredients so that we can avoid wasting them. 
+	The problem our team wants to solve is how to efficiently manage our kitchen supply and recipes so that we don't keep buying ingredients that we already have in the kitchen. 
 
 2. Describe at a high level a program that could solve that problem.  
-	We propose to develop a kitchen manager application that allows users to edit(add, remove, update)/view the inventory (list of ingredients), edit/view the cookbook (list of recipes). The users can also select one or more recipes from the cookbook and the application would tell the users whether they have enough ingredients to execute the recipes. Furthermore, the application can suggest recipes for users based on available ingredients if the selected recipes can not be executed. These capabilities help sove the problem stated above in the following ways: 
-* Users can view what ingredients they have so when they do grocery shopping, they can decide how many/much they need to buy. 
-* Users can select from the suggested recipes to cook meals with available ingredients so these ingredients will be used up and not go to waste.
+	We propose to develop a kitchen manager application that allows users to edit(add, remove, update)/view the inventory (list of ingredients), edit/view the cookbook (list of recipes). The users can also select one or more recipes from the cookbook and the application would tell the users whether they have enough ingredients to execute the recipes. With these capabilities, users can view what ingredients they have so when they do grocery shopping, they can decide how many/much they need to buy. Furthermore, users can select from the available recipes to cook meals with available ingredients so these ingredients will be used up and not go to waste.
 
 
 ## Questions to answer for Exercise #2
