@@ -200,8 +200,56 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
    	// Depending on the selected action, the users may need to provide more information (recipe or ingredient) 
 	// and the KitchenManager will calls appropriate method to execute the action
    	// Some user interface methods to display data for user or get inputs from users
-   }
-   ```
+   	}
+   	```
+	**f. TestSuite.java**
+	This class is responsible for testing the implementation of all classes with the JUnit framework
+	```
+	import org.junit.Assert.*;
+	import org.junit.Test;
+	public class TestSuite{
+		@Test
+		public void test01() {
+		//
+		}
+		@Test
+		public void test02() {
+		//
+		}
+		@Test
+		public void test03() {
+		//
+		}
+		@Test
+		public void test04() {
+		//
+		}
+		@Test
+		public void test05() {
+		//
+		}
+		@Test
+		public void test06() {
+		//
+		}
+		@Test
+		public void test07() {
+		//
+		}
+		@Test
+		public void test08() {
+		//
+		}
+		@Test
+		public void test09() {
+		//
+		}
+		@Test
+		public void test10() {
+		//
+		}
+	}
+	```
 
 ## Edit and Submit this file and any figures referenced by this document.
 
