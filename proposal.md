@@ -98,7 +98,10 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		// It throws exceptions similar to updateIngredient method
 		public Ingredient viewIngredient(Ingredient ingredient) throws IllegalArgumentException, NoSuchElementException;
 
-		// This method returns the cookbook as a list of recipe objects.
+		// Returns a lists of all ingredients currently inside of the Inventory.
+		public List<Ingredient> viewIngredients();
+
+		// Returns a list of all recipe objects inside of the cookbook.
 		public List<Recipe> viewCookBook();
 
 		// This method adds a new recipe to the cookbook. 
@@ -191,46 +194,58 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
    	```
 	**f. TestSuite.java**
 	This class is responsible for testing the implementation of all classes with the JUnit framework
+	
 	```
 	import org.junit.Assert.*;
 	import org.junit.Test;
 	public class TestSuite{
+	
 		@Test
-		public void test01() {
-		//
+		public void test01isEmptyCB() {
+		// Checks to see if a cookbook with no recipes is empty
 		}
+	
 		@Test
-		public void test02() {
-		//
+		public void test02isEmptyInv() {
+		// Checks to see if an inventory with no ingredients is empty
 		}
+	
 		@Test
-		public void test03() {
-		//
+		public void test03addIngredients() {
+		// Add some ingredients to the cookbook
+		// print the 
 		}
+		
 		@Test
 		public void test04() {
 		//
 		}
+		
 		@Test
 		public void test05() {
 		//
 		}
+		
 		@Test
 		public void test06() {
 		//
 		}
+		
 		@Test
 		public void test07() {
 		//
 		}
+		
 		@Test
 		public void test08() {
 		//
 		}
+		
 		@Test
 		public void test09() {
 		//
 		}
+		
 		@Test
 		public void test10() {
 		//
