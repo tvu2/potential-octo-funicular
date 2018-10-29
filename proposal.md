@@ -98,10 +98,10 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		// It throws exceptions similar to updateIngredient method
 		public Ingredient viewIngredient(Ingredient ingredient) throws IllegalArgumentException, NoSuchElementException;
 
-		// Returns a lists of all ingredients currently inside of the Inventory.
+		// Returns a lists of all ingredient objects currently inside of the Inventory.
 		public List<Ingredient> viewIngredients();
 
-		// Returns a list of all recipe objects inside of the cookbook.
+		// Returns a list of all recipe objects currently inside of the Cookbook.
 		public List<Recipe> viewCookBook();
 
 		// This method adds a new recipe to the cookbook. 
@@ -212,13 +212,18 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 	
 		@Test
 		public void test03addIngredients() {
-		// Add some ingredients to the cookbook
-		// print the 
+		// Initialize some ingredient objects
+		// Add these ingredients to the cookbook
+		// Run viewIngredients() and iterate through list to make sure all ingredient objects created are
+		// in the List
 		}
 		
 		@Test
-		public void test04() {
-		//
+		public void test04addRecipes() {
+		// Initialize some recipe objects
+		// Add these ingredients to the cookbook
+		// Run viewcookbook() and iterate through list to make sure all recipe objects created are
+		// in the List		
 		}
 		
 		@Test
