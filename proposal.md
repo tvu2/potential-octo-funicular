@@ -295,43 +295,8 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		// attempting to remove a recipe that is not in the cookbook.
 		}
 		
-		@Test 
-		public void test17UpdateNullRecipe() {
-		// Test to see if updateRecipe() throws an exception when
-		// attempting to update a null recipe argument.
-		}
-		
-		@Test 
-		public void test18UpdateRecipeNotInBook() {
-		// Initialize some recipes into cookbook.
-		// Test to see if updateRecipe() throws an exception when
-		// attempting to update a recipe not in the cookbook.
-		}
-		
-		@Test 
-		public void test19UpdateRecipeEmptyBook() {
-		// Test to see if removeRecipe() throws an exception when
-		// attempting to update a recipe in an empty cookbook.
-		}
-		
-		@Test 
-		public void test20MakeNullRecipe() {
-		// Test to see if makeRecipe() throws an exception when
-		// attempting to make a null recipe argument.
-		}
-		
-		@Test 
-		public void test21MakeRecipeNotInBook() {
-		// Initialize some recipes into cookbook.
-		// Test to see if makeRecipe() throws an exception when
-		// attempting to make a recipe not in the cookbook.
-		}
-		
-		@Test 
-		public void test22MakeRecipeEmptyBook() {
-		// Test to see if makeRecipe() throws an exception when
-		// attempting to make a recipe from an empty cookbook.
-		}
+		// Similar tests to test14-test16 can be written for updateRecipe(), 
+		// makeRecipe() and viewRecipe(). 
 		
 		// More test cases
 	}
