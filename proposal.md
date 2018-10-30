@@ -46,11 +46,11 @@ Our program requires multiple data type, below are some examples:
 
 The program will contain two main screens that the user can select from. The first screen (see inventory.jpg) will be the Inventory screen. From here the user can create, delete, edit, and view individual ingredients. To change the properties of an ingredient the user will click the Edit button. From there a new window will pop up with additional details such as a description of the ingredient and the quantity (which can be changed as needed). The View button will take the user to a similar window as the Edit button, except all fields will be uneditable. To create a brand new ingredient the user will click the Add New Ingredient button. To delete an ingredient, user will click the delete button, and the ingredient will be removed from the inventory.
 
-![Inventory Screen](https://github.com/tvu2/potential-octo-funicular/blob/TV_branch/inventory.jpg)
+![Inventory Screen](https://github.com/tvu2/potential-octo-funicular/blob/master/inventory.jpg)
 
 The second screen (see cookbook.jpg) in the program will be the Cookbook screen. In the Cookbook screen the user can manage recipes made up of one or more ingredients. The View, Edit, Delete and Add New Recipe buttons in the Cookbook screen have similar functionalities as those in the Inventory screen. The Make button will take the user to another screen where the recipe ingredients will be listed (ingredients that are missing will be listed in red). If all ingredients are available, the user can confirm they want to make the recipe, which will automatically subtract all ingredients used in the Inventory menu.
 
-![Cookbook Screen](https://github.com/tvu2/potential-octo-funicular/blob/TV_branch/cookbook.jpg)
+![Cookbook Screen](https://github.com/tvu2/potential-octo-funicular/blob/master/cookbook.jpg)
 
 5. Types List: Break your solution idea down into units that you think can be implemented with a single class.
 
