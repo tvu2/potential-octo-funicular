@@ -1,35 +1,23 @@
 # X-Team 37 Proposal for Developing a Kitchen Manager Application
 
-## Goal
-
-Work as a team to create a project proposal for your X-team to complete together.
-The project does not have to be extremely difficult,
-but there must be work to do for each member of your team.
-You may reference figures using "See figure 1".  
-Be sure to submit corresponding image files, i.e. figure1.png (or figure1.jpg) for each figure.
-
-## Grading: To earn full credit, your team's proposal must include:
-
-** (md) documentation: [this file] describing purpose and use of your program
-
-** Our program will consist of the following classes and interface (See Answers to Question 5 in the section below for description of each class and interface):  
-  	* Classes: Main, KitchenManager, Ingredient, Recipe  
-	* Interface: KitchenManagerADT  
-** Our custom objects are Ingredient, and Recipe. We use a hash table (similar to P3) to store the inventory with Ingredient being the key and quantity being the value. Since Ingredient is a custom object, we need to overide the equals and hashCode methods to support hash table operations. For a cookbook which is a collection of recipes, we used List to store the recipes. Since Recipe is also a custom object, we also need to overide the equals method to support List operations.   
-
-** comprehensive testing of individual units 
-  
- Caution: You are not being asked to implement this program, at least not yet. 
- We just want your group to make a proposal or pitch for your program.
- 
-Tip: Your custom data structure can be composed of or extensions of data structures that you have learned and used in previous programming assignments.  We're looking for decisions about how to build a high-level data structure that will likely have lower-level components.
-
 ## Problem Description
-1. Briefly describe a problem that your team would like to solve.  
-	The problem our team wants to solve is how to efficiently manage our kitchen supply and recipes so that we don't keep buying ingredients that we already have in the kitchen. 
+The problem our team wants to solve is how to efficiently manage our kitchen supply so that we don't keep buying ingredients that we already have in the kitchen. 
 
-2. Describe at a high level a program that could solve that problem.  
-	We propose to develop a kitchen manager application that allows users to edit(add, remove, update)/view the inventory (list of ingredients), edit/view the cookbook (list of recipes). The users can also select one or more recipes from the cookbook and the application would tell the users whether they have enough ingredients to execute the recipes. With these capabilities, users can view what ingredients they have so when they do grocery shopping, they can decide how many/much they need to buy. Furthermore, users can select from the available recipes to cook meals with available ingredients so these ingredients will be used up and not go to waste.
+To solve this problem, we propose to develop a kitchen manager application that allows users to create an inventory which essentially a collections of ingredients and their quantities. Users can make changes to the inventory by adding new ingredients, deleting existing ingredients, or editing ingredients properties and quantities. Similarly, users can create a cookbook, which is a collection of recipes. They can add/remove/edit recipes. The users can also select one or more recipes from the cookbook and the application would tell the users whether they have enough ingredients to execute the recipes. With these capabilities, users can view what ingredients they have so when they do grocery shopping, they can decide how many/much they need to buy. Furthermore, because users can select from the available recipes to cook meals with available ingredients, these ingredients will be used up and not go to waste.
+
+## Description of the Kitchen Manager Application
+Our program will consist of the classes and interface in the table below. Detail of these are presented in answer to question 5 of the section below. 
+|Name|Description|File|
+|---|---|---|
+|Main|This class takes in users' inputs and processes them by calling appropriate KitchenManager methods.|Main.java|
+|KitchenManagerADT|This is the interface for the Kitchen Manager application.|KitchenManagerADT.java|
+|KitchenManager|This class implements the methods described in the interface.|KitchenManager.java|
+|Ingredient|This class represent an ingredient object.|Ingredient.java|
+|Recipe|This class represents a recipe object.|Recipe.java|
+
+Our custom objects are Ingredient, and Recipe. We use a hash table (similar to assignment P3) to store the inventory with Ingredient being the key and quantity being the value. Since Ingredient is a custom object, we need to overide the equals and hashCode methods to support hash table operations. For a cookbook which is a collection of recipes, we used List to store the recipes. Since Recipe is also a custom object, we also need to overide the equals method to support List operations. 
+
+Besides the program described above, we will also develop a comprehensive test suit to thoroughly test all the functionalities of our application. Since we are developing the program, we have access to all the code, we are conducting a white unit testing to cover all path of the codes: public methods, private helper methods, user interface methods. We will use JUnit test framework to write our test cases. Some example of test cases are provided as part of answer to question 5 in the section below. 
 
 
 ## Questions to answer for Exercise #2
@@ -66,7 +54,7 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 5. Types List: Break your solution idea down into units that you think can be implemented with a single class.
 
 	**a. KitchenManagerADT.java**
-	This is the interface for the Kitchen Manager application.
+	This is the interface for the Kitchen Manager application. Here are examples of a couple of main functionalities of the application. We anticipate to add more methods in later development stages. 
 	```
 	public interface KitchenManagerADT {
 		// This method returns the inventory as a hash table of ingredient objects. 
@@ -131,13 +119,13 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 	} 
 	```
 	**b. KitchenManager.java**
-	This class implements the methods described in the KitchenManagerADT.java
+	This class implements the methods described in the interface KitchenManagerADT.java.
 	```
 	public class KitchenManager(){
 		// Constructor to create a KitchenManager object
 		KitchenManager() {};
 		// Implementation Public methods listed in KitchenManagerADT.java
-		// Additional private helper methods such as: 
+		// Additional helper methods such as: 
 		// load/read inventory from file on disk, save inventory to file after update, etc. 
 	}
 	```
@@ -158,10 +146,11 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		// Overide hashCode method
 		@overide
 		public int hashCode(Ingredient ingredient){}
+		// Additional helper methods
 	}
 	```
 	**d. Recipe.java**
-	This class represents recipe
+	This class represents recipe.
 	```
 	public class Recipe() {
 		private String name; // name of the recipe
@@ -176,6 +165,7 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		// If they have the same name, same List of ingredients, they are the same recipes.
 		@overide
 		public boolean equals(Recipe recipe) {}
+		// Additional helper methods
 	}
 	```
 	**e. Main.java**
@@ -214,8 +204,8 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		public void test03addIngredients() {
 		// Initialize some ingredient objects
 		// Add these ingredients to the cookbook
-		// Run viewIngredients() and iterate through list to make sure all ingredient objects created are
-		// in the List
+		// Run viewIngredients() and iterate through the hash table to make sure all ingredient objects created are
+		// in the table
 		}
 		
 		@Test
@@ -228,7 +218,7 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		
 		@Test
 		public void test05ingredientUpdates() {
-		// Create an ingreedient
+		// Create an ingredient
 		// Call the updateIngreedient method
 		// compare the ingredient found in the hash table with the updated data
 		// to make sure they are the same
@@ -236,19 +226,21 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		
 		@Test
 		public void test06recipeUpdates() {
-		// Create an recipe
+		// Create a recipe
 		// Call the updateRecipe method
 		// compare the recipe found in the hash table with the updated data
 		// to make sure they are the same		}
 		
 		@Test
 		public void test07removeIngredient() {
-		// Add an Ingredient, remove it from the hashTable and call isEmpty
+		// Add an Ingredient, remove it from the hashTable and call viewIngredient() method
+		// The test should throw a NoSuchElementException. 
 		}
 		
 		@Test
 		public void test08removeRecipe() {
-		// Add a recipe, remove it from the hashTable and call isEmpty
+		// Add a recipe, remove it from the hashTable and call viewRecipe() method
+		// The test should throw a NoSuchElementException
 		}
 		
 		@Test
@@ -264,13 +256,11 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		}
 		
 		@Test
-		public void test11AddIngredientsSubtractQuantity() {
+		public void test11MakeRecipeUpdateInventory() {
 		// Initialize and add many ingredients to the cookbook
 		// with a certain quantity.
 		// Initialize and add a custom recipe.
-		// Use recipe to subtract the correct quantity from
-		// each ingredient.
-		// Tests if quanities are subtracted correctly.
+		// call makeRecipe() method and then viewInventory() to check if the quantity has been updated
 		}
 		
 		@Test
@@ -337,18 +327,11 @@ The second screen (see cookbook.jpg) in the program will be the Cookbook screen.
 		}
 		
 		@Test 
-		public void test19MakeRecipeEmptyBook() {
+		public void test22MakeRecipeEmptyBook() {
 		// Test to see if makeRecipe() throws an exception when
 		// attempting to make a recipe from an empty cookbook.
 		}
 		
-		// removeIngredient(), updateIngredient(), and viewIngredient()
-		// should be tested in the same exact format as makeRecipe(),
-		// removeRecipe(), and updateRecipe() were in the above example
-		// tests.
-
+		// More test cases
 	}
 	```
-
-## Edit and Submit this file and any figures referenced by this document.
-
