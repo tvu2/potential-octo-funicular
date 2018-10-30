@@ -1,0 +1,10 @@
+ID,Name,Description,Category,Quantity,Unit,Location
+1,Apple,Fuji,Fruit,3,counts,Fridge
+2,Orange,,Fruit,1,counts,Fridge
+3,Beef,Ground ,Meat,2,lbs,Freezer
+4,Shrimp,Headless,Seafood,1,lbs,Freezer
+5,Pasta,Spaghetti,Dry,1,counts,Room
+6,Onion,Green,Vegetable,0,counts,Fridge
+7,Milk,Whole,Dairy,0.5,gallons,Fridge
+9,Cheese,Parmesan,Dairy,2.5,cups,Fridge
+10,Carrots,Bunch,Vegetable,1,counts,Fridge
