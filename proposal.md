@@ -6,7 +6,8 @@ The problem our team wants to solve is how to efficiently manage our kitchen sup
 To solve this problem, we propose to develop a kitchen manager application that allows users to create an inventory which essentially a collections of ingredients and their quantities. Users can make changes to the inventory by adding new ingredients, deleting existing ingredients, or editing ingredients properties and quantities. Similarly, users can create a cookbook, which is a collection of recipes. They can add/remove/edit recipes. The users can also select one or more recipes from the cookbook and the application would tell the users whether they have enough ingredients to execute the recipes. With these capabilities, users can view what ingredients they have so when they do grocery shopping, they can decide how many/much they need to buy. Furthermore, because users can select from the available recipes to cook meals with available ingredients, these ingredients will be used up and not go to waste.
 
 ## Description of the Kitchen Manager Application
-Our program will consist of the classes and interface in the table below. Detail of these are presented in answer to question 5 of the section below. 
+Our program will consist of the classes and interface in the table below. Detail of these are presented in answer to question 5 of the section below.  
+
 |Name|Description|File|
 |---|---|---|
 |Main|This class takes in users' inputs and processes them by calling appropriate KitchenManager methods.|Main.java|
