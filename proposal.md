@@ -30,7 +30,7 @@ Developing a Kitchen Manager Application
 2. Output: Describe the output your program will produce.  Include and example format of the output produced.
 
 Depending on the input data, the output can be different. Below is some examples of outputs produced by our Kitchen Manager Application: 
-* List of all ingredients in the inventory (inventory.csv). 
+* List of all ingredients in the inventory. 
 * Detail of an ingredient with the following properties: ID, name, description, category (eg. Meat, Vegetable, Dry,etc.), quantity, units, location (Room, Freezer, Fridge).
 * List of all recipes in the cookbook.
 * Detail of a recipe with name, list of ingredients, the required quantities, and instruction how to make the recipe. 
